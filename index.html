@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To Do List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="to-do-list-wrapper">
+      <div class="header">
+        <h2 class="to-do-list-title">To Do List</h2>
+        <input
+          type="text"
+          name="newItem"
+          id="newItem"
+          placeholder="Add new to do..."
+        />
+        <select class="daySelect" id="daySelect">
+          <option value="monday">Luni</option>
+          <option value="tuesday">Marti</option>
+          <option value="wednesday">Miercuri</option>
+          <option value="thursday">Joi</option>
+          <option value="friday">Vineri</option>
+          <option value="saturday">Sambata</option>
+          <option value="sunday">Duminica</option>
+        </select>
+        <button class="addItem" onclick="createItem()">Add new Item</button>
+        <script>
+          var input = document.getElementById("newItem");
+          input.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+              event.preventDefault();
+              createItem()
+            }
+          });
+        </script>
+      </div>
+      <div class="itemList">
+        <ol id="orderedList"></ol>
+      </div>
+      <div class="weekDays">
+        <div class="weekday" id="monday">
+          <ol></ol>
+        </div>
+        <div class="weekday" id="tuesday">
+          <ol></ol>
+        </div>
+        <div class="weekday" id="wednesday">
+          <ol></ol>
+        </div>
+        <div class="weekday" id="thursday">
+          <ol></ol>
+        </div>
+        <div class="weekday" id="friday">
+          <ol></ol>
+        </div>
+        <div class="weekday" id="saturday">
+          <ol></ol>
+        </div>
+        <div class="weekday" id="sunday">
+          <ol></ol>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

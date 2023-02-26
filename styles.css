@@ -1,0 +1,247 @@
+:root {
+  --dark:#374151;
+  --darker: #1F2937;
+  --darkest: #111827;
+  --dark_blue: #051977;
+  --grey: #6B7280;
+  --pink: #EC4899;
+  --purple: #8B5CF6;
+  --lighter_pink: #ffb6ff;
+  --light: #EEE;
+  --blue_navy: #000080;
+}
+
+html {
+  background-color: #6b7280;
+  font-family: "Courier New", monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+
+.to-do-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 55rem;
+  min-height: 30rem;
+  padding-bottom: 3rem;
+  border-radius: 7px;
+  background-color: var(--dark);
+}
+
+.to-do-list-title {
+   background-image: linear-gradient(to left,var(--lighter_pink), var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#newItem {
+  height: 2rem;
+  width: 30rem;
+  border: none;
+  border-radius: 7px;
+  background-color: var(--grey);
+  opacity: 50%;
+  padding-left: 0.5rem;
+  color: #674188;
+}
+
+#newItem::placeholder {
+  color: var(--dark_blue);
+}
+
+#newItem:focus {
+  outline: none;
+  opacity: 100%;
+}
+
+.addItem {
+  display: block;
+  margin-top: 20px;
+  height: 2rem;
+  border-radius: 7px;
+  border: none;
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  background-clip: text;
+  width: 100%;
+  /* text marit? */
+}
+
+.addItem:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.24);
+}
+
+.addItem:active {
+  background-color: #c3acd0;
+  color: #f7efe5;
+  box-shadow: none;
+}
+
+.itemList {
+  margin-top: 2rem;
+  width: 36rem;
+  min-height: 15rem;
+  background-image: linear-gradient(to right, var(--dark), var(--darker), var(--darkest));
+  -webkit-text-fill-color: var(--purple);
+  border-radius: 7px;
+  padding: 1rem;
+}
+
+.item {
+  color: var(--purple);
+  padding: 10px 0px;
+}
+
+.itemName {
+  width: 20rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.itemDelete {
+  position: relative;
+  left: 12rem;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.itemDelete:hover {
+  cursor: pointer;
+  background-color: var(--dark);
+}
+
+.weekDays {
+  width: 46rem;
+  min-height: 30rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.weekday {
+  height: 20rem;
+  background-image: linear-gradient(to right, var(--dark), var(--darker), var(--darkest));
+  width: 30%;
+  /* border: 1px solid #000; */
+  flex-grow: 1;
+  box-sizing: border-box;
+  margin: 0 5px 10px;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#monday::before {
+  background-image: linear-gradient(to left,var(--lighter_pink), var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  background-clip: text;
+  content: "Luni";
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#tuesday::before {
+  background-image: linear-gradient(to left,var(--lighter_pink), var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  background-clip: text;
+  content: "Marti";
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#wednesday::before {
+  background-image: linear-gradient(to left,var(--lighter_pink), var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  background-clip: text;
+  content: "Miercuri";
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#thursday::before {
+  background-image: linear-gradient(to left,var(--lighter_pink), var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  background-clip: text;
+  content: "Joi";
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#friday::before {
+  background-image: linear-gradient(to left,var(--lighter_pink), var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  background-clip: text;
+  content: "Vineri";
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#saturday::before {
+  background-image: linear-gradient(to left,var(--lighter_pink), var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  background-clip: text;
+  content: "Sambata";
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#sunday::before {
+  background-image: linear-gradient(to left,var(--lighter_pink), var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  background-clip: text;
+  content: "Duminica";
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#sunday {
+  grid-column-end: 3;
+}
+
+#thursday, #friday {
+	width: 40%;
+}
+
+.daySelect {
+  height: 2rem;
+  border-radius: 7px;
+  background-color: var(--grey);
+  padding-left: 5px;
+  background-image: linear-gradient(to left,var(--lighter_pink), var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.daySelect:focus {
+  outline: none;
+}
+
+.miniLI {
+  color: var(--purple);
+  text-align: left;
+}
